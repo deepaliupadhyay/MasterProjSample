@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class MasterController {
     Master.controllers.testDB db = new Master.controllers.testDB();
 
-  /*  @GetMapping("/records")
-   public JSONObject getHelloMessage(@RequestParam(value="zipcode", defaultValue="94041") String zipcode){
-        String data;
+    @GetMapping("/records")
+   public String getHelloMessage(@RequestParam(value="zipcode", defaultValue="94041") String zipcode){
+ /*       String data;
         data = this.db.getData(zipcode);
         //System.out.println(JsonWriter.formatJson(data));
         //String niceFormattedJson = JsonWriter.formatJson(data);
@@ -25,11 +25,11 @@ public class MasterController {
             System.out.println(zipcode);
         } catch (ParseException e) {
             e.printStackTrace();
-        }
+        }*/
 
-        return output;
+        return "test";
 
-    }*/
+    }
     @GetMapping("/dummy")
     public JSONArray dummy(@RequestParam(value="zipcode", defaultValue="94041") String zipcode){
         JSONArray data;
