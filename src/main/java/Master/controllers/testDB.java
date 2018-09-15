@@ -99,7 +99,7 @@ public class testDB {
         );
         mongoClient = new MongoClient(uri);
         MongoDatabase database = mongoClient.getDatabase("projectdb");
-        MongoCollection<Document> collection = database.getCollection("projectData");
+        MongoCollection<Document> collection = database.getCollection("cleanData3");
         int zip = Integer.parseInt(zipcode);
         System.out.println(zip);
 
