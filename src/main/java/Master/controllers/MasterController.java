@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MasterController {
     Master.controllers.testDB db = new Master.controllers.testDB();
 
-    @GetMapping("/records")
+   /* @GetMapping("/records")
    public String getHelloMessage(@RequestParam(value="zipcode", defaultValue="94041") String zipcode){
  /*       String data;
         data = this.db.getData(zipcode);
@@ -25,13 +25,13 @@ public class MasterController {
             System.out.println(zipcode);
         } catch (ParseException e) {
             e.printStackTrace();
-        }*/
+        }
 
         return "test";
 
-    }
+    }*/
     @GetMapping("/dummy")
-    public JSONArray dummy(@RequestParam(value="zipcode", defaultValue="94041") String zipcode){
+    public JSONArray dummy(@RequestParam("zipcode") String zipcode){
         JSONArray data;
         data = this.db.getData(zipcode);
         //System.out.println(JsonWriter.formatJson(data));
