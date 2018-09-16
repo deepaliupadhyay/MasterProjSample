@@ -239,7 +239,7 @@ public class testDB {
         );
         mongoClient = new MongoClient(uri);
         MongoDatabase database = mongoClient.getDatabase("projectdb");
-        MongoCollection<Document> collection = database.getCollection("cleanData3");
+        MongoCollection<Document> collection = database.getCollection("projectData");
         //int zip = Integer.parseInt(zipcode);
         //System.out.println(zip);
 
